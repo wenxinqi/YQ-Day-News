@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16FC5C62EC9BB14DA7826201 /* libPods-DayNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0626672FE95F0269C5EF1375 /* libPods-DayNews.a */; };
 		552702841F234E8600FF1908 /* YQTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552702681F234E8600FF1908 /* YQTabBarController.m */; };
 		552702851F234E8600FF1908 /* YQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5527026A1F234E8600FF1908 /* YQNavigationController.m */; };
 		552702861F234E8600FF1908 /* YQVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552702701F234E8600FF1908 /* YQVideoViewController.m */; };
@@ -15,15 +16,18 @@
 		552702891F234E8600FF1908 /* YQNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552702821F234E8600FF1908 /* YQNewsViewController.m */; };
 		5527028C1F2350D700FF1908 /* YQHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5527028B1F2350D700FF1908 /* YQHeaderView.m */; };
 		5527028E1F2350E500FF1908 /* YQHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5527028D1F2350E500FF1908 /* YQHeaderView.xib */; };
+		55B2C64C1F30A0BA00E25928 /* YQVideoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B2C64B1F30A0BA00E25928 /* YQVideoHeaderView.m */; };
+		55B2C64F1F30A60A00E25928 /* YQVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B2C64E1F30A60A00E25928 /* YQVerticalButton.m */; };
 		55B4E2EE1F1F59A3009DF7BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B4E2ED1F1F59A3009DF7BA /* main.m */; };
 		55B4E2F11F1F59A3009DF7BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B4E2F01F1F59A3009DF7BA /* AppDelegate.m */; };
 		55B4E2F91F1F59A3009DF7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B4E2F81F1F59A3009DF7BA /* Assets.xcassets */; };
 		55B4E3071F1F59A3009DF7BA /* DayNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B4E3061F1F59A3009DF7BA /* DayNewsTests.m */; };
 		55B4E3121F1F59A3009DF7BA /* DayNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B4E3111F1F59A3009DF7BA /* DayNewsUITests.m */; };
-		55E700F61F26120300397EAB /* YQTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E700F51F26120300397EAB /* YQTitleView.m */; };
-		55E700F81F26121300397EAB /* YQTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E700F71F26121300397EAB /* YQTitleView.xib */; };
+		55B7CCDA1F36E13100451745 /* YQVideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CCD91F36E13100451745 /* YQVideoData.m */; };
+		55B7CCDE1F36E17800451745 /* YQVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CCDC1F36E17800451745 /* YQVideoTableViewCell.m */; };
+		55B7CCDF1F36E17800451745 /* YQVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B7CCDD1F36E17800451745 /* YQVideoTableViewCell.xib */; };
+		55B7CE111F3835DD00451745 /* YQConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CE101F3835DD00451745 /* YQConst.m */; };
 		55E700FB1F28CD3100397EAB /* UIView+YQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E700FA1F28CD3100397EAB /* UIView+YQExtension.m */; };
-		55E701011F2A15FF00397EAB /* YQConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E701001F2A15FF00397EAB /* YQConst.m */; };
 		55E701041F2A1D8200397EAB /* YQSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E701031F2A1D8200397EAB /* YQSocialViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0626672FE95F0269C5EF1375 /* libPods-DayNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DayNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		362FEBC9DF534E86E2114BD0 /* Pods-DayNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayNews/Pods-DayNews.release.xcconfig"; sourceTree = "<group>"; };
 		552702671F234E8600FF1908 /* YQTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQTabBarController.h; sourceTree = "<group>"; };
 		552702681F234E8600FF1908 /* YQTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQTabBarController.m; sourceTree = "<group>"; };
 		552702691F234E8600FF1908 /* YQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNavigationController.h; sourceTree = "<group>"; };
@@ -60,6 +66,10 @@
 		5527028A1F2350D700FF1908 /* YQHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHeaderView.h; sourceTree = "<group>"; };
 		5527028B1F2350D700FF1908 /* YQHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHeaderView.m; sourceTree = "<group>"; };
 		5527028D1F2350E500FF1908 /* YQHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQHeaderView.xib; sourceTree = "<group>"; };
+		55B2C64A1F30A0BA00E25928 /* YQVideoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQVideoHeaderView.h; sourceTree = "<group>"; };
+		55B2C64B1F30A0BA00E25928 /* YQVideoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQVideoHeaderView.m; sourceTree = "<group>"; };
+		55B2C64D1F30A60A00E25928 /* YQVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQVerticalButton.h; sourceTree = "<group>"; };
+		55B2C64E1F30A60A00E25928 /* YQVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQVerticalButton.m; sourceTree = "<group>"; };
 		55B4E2E91F1F59A3009DF7BA /* DayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B4E2ED1F1F59A3009DF7BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55B4E2EF1F1F59A3009DF7BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,15 +83,18 @@
 		55B4E3111F1F59A3009DF7BA /* DayNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayNewsUITests.m; sourceTree = "<group>"; };
 		55B4E3131F1F59A3009DF7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B4E3251F1F5D44009DF7BA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		55E700F41F26120300397EAB /* YQTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQTitleView.h; sourceTree = "<group>"; };
-		55E700F51F26120300397EAB /* YQTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQTitleView.m; sourceTree = "<group>"; };
-		55E700F71F26121300397EAB /* YQTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQTitleView.xib; sourceTree = "<group>"; };
+		55B7CCD81F36E13100451745 /* YQVideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YQVideoData.h; path = ../Controller/YQVideoData.h; sourceTree = "<group>"; };
+		55B7CCD91F36E13100451745 /* YQVideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YQVideoData.m; path = ../Controller/YQVideoData.m; sourceTree = "<group>"; };
+		55B7CCDB1F36E17800451745 /* YQVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQVideoTableViewCell.h; sourceTree = "<group>"; };
+		55B7CCDC1F36E17800451745 /* YQVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQVideoTableViewCell.m; sourceTree = "<group>"; };
+		55B7CCDD1F36E17800451745 /* YQVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQVideoTableViewCell.xib; sourceTree = "<group>"; };
+		55B7CE0F1F3835DD00451745 /* YQConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQConst.h; sourceTree = "<group>"; };
+		55B7CE101F3835DD00451745 /* YQConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQConst.m; sourceTree = "<group>"; };
 		55E700F91F28CD3100397EAB /* UIView+YQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+YQExtension.h"; path = "../../News/Controller/UIView+YQExtension.h"; sourceTree = "<group>"; };
 		55E700FA1F28CD3100397EAB /* UIView+YQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+YQExtension.m"; path = "../../News/Controller/UIView+YQExtension.m"; sourceTree = "<group>"; };
-		55E700FF1F2A15FF00397EAB /* YQConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YQConst.h; path = ../../../../YQConst.h; sourceTree = "<group>"; };
-		55E701001F2A15FF00397EAB /* YQConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YQConst.m; path = ../../../../YQConst.m; sourceTree = "<group>"; };
 		55E701021F2A1D8200397EAB /* YQSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQSocialViewController.h; sourceTree = "<group>"; };
 		55E701031F2A1D8200397EAB /* YQSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQSocialViewController.m; sourceTree = "<group>"; };
+		FB89727612789098C3201C63 /* Pods-DayNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DayNews/Pods-DayNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FC5C62EC9BB14DA7826201 /* libPods-DayNews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18D495A080BC9C212B3F3731 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0626672FE95F0269C5EF1375 /* libPods-DayNews.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		552702631F234E8600FF1908 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,8 +176,8 @@
 			children = (
 				55E700F91F28CD3100397EAB /* UIView+YQExtension.h */,
 				55E700FA1F28CD3100397EAB /* UIView+YQExtension.m */,
-				55E700FF1F2A15FF00397EAB /* YQConst.h */,
-				55E701001F2A15FF00397EAB /* YQConst.m */,
+				55B7CE0F1F3835DD00451745 /* YQConst.h */,
+				55B7CE101F3835DD00451745 /* YQConst.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +195,8 @@
 		5527026D1F234E8600FF1908 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55B7CCD81F36E13100451745 /* YQVideoData.h */,
+				55B7CCD91F36E13100451745 /* YQVideoData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +213,13 @@
 		552702711F234E8600FF1908 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55B2C64A1F30A0BA00E25928 /* YQVideoHeaderView.h */,
+				55B2C64B1F30A0BA00E25928 /* YQVideoHeaderView.m */,
+				55B2C64D1F30A60A00E25928 /* YQVerticalButton.h */,
+				55B2C64E1F30A60A00E25928 /* YQVerticalButton.m */,
+				55B7CCDB1F36E17800451745 /* YQVideoTableViewCell.h */,
+				55B7CCDC1F36E17800451745 /* YQVideoTableViewCell.m */,
+				55B7CCDD1F36E17800451745 /* YQVideoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,9 +324,6 @@
 		552702831F234E8600FF1908 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				55E700F41F26120300397EAB /* YQTitleView.h */,
-				55E700F51F26120300397EAB /* YQTitleView.m */,
-				55E700F71F26121300397EAB /* YQTitleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +335,8 @@
 				55B4E3051F1F59A3009DF7BA /* DayNewsTests */,
 				55B4E3101F1F59A3009DF7BA /* DayNewsUITests */,
 				55B4E2EA1F1F59A3009DF7BA /* Products */,
+				CEB01275553C394589979A13 /* Pods */,
+				18D495A080BC9C212B3F3731 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,10 +353,10 @@
 		55B4E2EB1F1F59A3009DF7BA /* DayNews */ = {
 			isa = PBXGroup;
 			children = (
-				55B4E2EF1F1F59A3009DF7BA /* AppDelegate.h */,
-				55B4E2F01F1F59A3009DF7BA /* AppDelegate.m */,
 				552702631F234E8600FF1908 /* classes */,
 				55B4E3251F1F5D44009DF7BA /* PrefixHeader.pch */,
+				55B4E2EF1F1F59A3009DF7BA /* AppDelegate.h */,
+				55B4E2F01F1F59A3009DF7BA /* AppDelegate.m */,
 				55B4E2F81F1F59A3009DF7BA /* Assets.xcassets */,
 				55B4E2FD1F1F59A3009DF7BA /* Info.plist */,
 				55B4E2EC1F1F59A3009DF7BA /* Supporting Files */,
@@ -360,6 +390,15 @@
 			path = DayNewsUITests;
 			sourceTree = "<group>";
 		};
+		CEB01275553C394589979A13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB89727612789098C3201C63 /* Pods-DayNews.debug.xcconfig */,
+				362FEBC9DF534E86E2114BD0 /* Pods-DayNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,9 +406,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55B4E3161F1F59A3009DF7BA /* Build configuration list for PBXNativeTarget "DayNews" */;
 			buildPhases = (
+				0652A3D485F8A4FDAF2069C7 /* [CP] Check Pods Manifest.lock */,
 				55B4E2E51F1F59A3009DF7BA /* Sources */,
 				55B4E2E61F1F59A3009DF7BA /* Frameworks */,
 				55B4E2E71F1F59A3009DF7BA /* Resources */,
+				FF38A42C5F9C0F160BEF2B26 /* [CP] Embed Pods Frameworks */,
+				8E0DA26144D4C6266B9DAE1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -468,7 +510,7 @@
 			files = (
 				55B4E2F91F1F59A3009DF7BA /* Assets.xcassets in Resources */,
 				5527028E1F2350E500FF1908 /* YQHeaderView.xib in Resources */,
-				55E700F81F26121300397EAB /* YQTitleView.xib in Resources */,
+				55B7CCDF1F36E17800451745 /* YQVideoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,20 +530,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0652A3D485F8A4FDAF2069C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E0DA26144D4C6266B9DAE1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DayNews/Pods-DayNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF38A42C5F9C0F160BEF2B26 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DayNews/Pods-DayNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55B4E2E51F1F59A3009DF7BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				552702841F234E8600FF1908 /* YQTabBarController.m in Sources */,
-				55E700F61F26120300397EAB /* YQTitleView.m in Sources */,
 				55E700FB1F28CD3100397EAB /* UIView+YQExtension.m in Sources */,
 				552702881F234E8600FF1908 /* YQMeViewController.m in Sources */,
 				552702871F234E8600FF1908 /* YQPictureViewController.m in Sources */,
-				55E701011F2A15FF00397EAB /* YQConst.m in Sources */,
+				55B7CCDE1F36E17800451745 /* YQVideoTableViewCell.m in Sources */,
+				55B7CE111F3835DD00451745 /* YQConst.m in Sources */,
+				55B2C64C1F30A0BA00E25928 /* YQVideoHeaderView.m in Sources */,
 				552702891F234E8600FF1908 /* YQNewsViewController.m in Sources */,
+				55B7CCDA1F36E13100451745 /* YQVideoData.m in Sources */,
 				55E701041F2A1D8200397EAB /* YQSocialViewController.m in Sources */,
 				55B4E2F11F1F59A3009DF7BA /* AppDelegate.m in Sources */,
+				55B2C64F1F30A60A00E25928 /* YQVerticalButton.m in Sources */,
 				552702851F234E8600FF1908 /* YQNavigationController.m in Sources */,
 				5527028C1F2350D700FF1908 /* YQHeaderView.m in Sources */,
 				55B4E2EE1F1F59A3009DF7BA /* main.m in Sources */,
@@ -635,12 +728,24 @@
 		};
 		55B4E3171F1F59A3009DF7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB89727612789098C3201C63 /* Pods-DayNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DayNews/Lib/libraries/extends/QQSDK",
+					"$(PROJECT_DIR)/DayNews/Lib/libraries",
+				);
 				GCC_PREFIX_HEADER = DayNews/PrefixHeader.pch;
 				INFOPLIST_FILE = DayNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DayNews/Lib/HyphenateSDK/lib",
+					"$(PROJECT_DIR)/DayNews/Lib/libraries/extends/SinaWeiboSDK",
+					"$(PROJECT_DIR)/DayNews/Lib/libraries/extends/WeChatSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.qiqi.DayNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -648,12 +753,24 @@
 		};
 		55B4E3181F1F59A3009DF7BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 362FEBC9DF534E86E2114BD0 /* Pods-DayNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DayNews/Lib/libraries/extends/QQSDK",
+					"$(PROJECT_DIR)/DayNews/Lib/libraries",
+				);
 				GCC_PREFIX_HEADER = DayNews/PrefixHeader.pch;
 				INFOPLIST_FILE = DayNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DayNews/Lib/HyphenateSDK/lib",
+					"$(PROJECT_DIR)/DayNews/Lib/libraries/extends/SinaWeiboSDK",
+					"$(PROJECT_DIR)/DayNews/Lib/libraries/extends/WeChatSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.qiqi.DayNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

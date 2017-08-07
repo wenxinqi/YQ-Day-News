@@ -10,6 +10,9 @@
 
 @implementation UIView (YQExtension)
 
+#warning 编译时不生成存取方法，运行时提供存取方法
+@dynamic point;
+
 //height
 - (void)setHeight:(CGFloat)height
 {

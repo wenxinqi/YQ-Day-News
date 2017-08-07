@@ -7,10 +7,8 @@
 //
 
 #import "YQNewsViewController.h"
-#import "YQTitleView.h"
 #import "YQSocialViewController.h"
 
-#define  YQScreenWidth  [UIScreen mainScreen].bounds.size.width
 
 @interface YQNewsViewController ()<UIScrollViewDelegate>
 //标题scrollview
@@ -78,29 +76,36 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     //    创建titleview
-    YQTitleView *titleView = [YQTitleView titleVeiw];
-    //    将titleview添加到viewcontroller上，设置frame
-    titleView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 64);
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, YQSCREEN_WIDTH, 64)];
+    
+    titleView.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha: 1];
+    
     [self.view addSubview:titleView];
     
+//添加topSquareImage
+    UIImageView *squareImageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"top_navigation_square"]];
+    squareImageV.frame = CGRectMake(YQSCREEN_WIDTH - 30, 30, YQTopSquareWH, YQTopSquareWH);
     
-    //往titleView中添加titleScrollview
+//    给imagev添加一个点击事件
+    [squareImageV addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSquareImageV)]];
+    squareImageV.userInteractionEnabled = YES;
+    [titleView addSubview:squareImageV];
+    
+//往titleView中添加titleScrollview
     //当一个弱类型的变量被创建分配内存后，会立马被释放
     UIScrollView *titleScrollview = [[UIScrollView alloc] init];
     //    给titlescrollview添加样式
     titleScrollview.frame = CGRectMake(0, 20, self.view.bounds.size.width - 39, 44);
     self.titleScrollView = titleScrollview;
     self.titleScrollView.showsHorizontalScrollIndicator = NO;
-    
+   
     [titleView addSubview:titleScrollview];
-    
-//    让titleScrollView可以和用户进行交互
-    self.titleScrollView.userInteractionEnabled = YES;
+
     
 //    往titleScrollview中添加button
     //创建一个数组存放btn的textlabel
     CGFloat btnX ;
-    CGFloat btnW = 80;
+    CGFloat btnW = 72;
     CGFloat btnH = 44;
     NSArray *btnNames = @[@"社会",@"国内",@"国际",@"娱乐",@"体育",@"科技",@"奇闻趣事",@"生活健康"];
     
@@ -118,9 +123,10 @@
         btnX = btnW * i;
 //        设置btn的frame
         btn.frame = CGRectMake(btnX, 0, btnW, btnH);
+        btn.userInteractionEnabled = YES;
         
-        //将btn添加到titlescrollview中
-        [self.titleScrollView addSubview:btn];
+//将btn添加到titlescrollview中,让titleScrollview在最上面
+        [self.titleScrollView insertSubview:btn belowSubview:self.titleScrollView];
         
         //第一个按钮默认为点击状态
         if (i == 0) {
@@ -132,10 +138,13 @@
     
     //设置titleScrollView的contentsize
     self.titleScrollView.contentSize = CGSizeMake(btnW * btnNames.count, 0);
-    
-    
 }
 
+//tapSquareImageV
+- (void)tapSquareImageV
+{
+    NSLog(@"tapclick");
+}
 - (void) setupContentView
 {
     //创建一个scrollveiw
@@ -153,8 +162,8 @@
     contentScrollView.delegate = self;
     
 //    设置contentScrollView的contentsize,设置哪个为0，则这个方向上不能滚动
-    self.contentScrollView.contentSize = CGSizeMake(self.childViewControllers.count * YQScreenWidth, 0);
-//    self.contentScrollView.pagingEnabled = YES;
+    self.contentScrollView.contentSize = CGSizeMake(self.childViewControllers.count * YQSCREEN_WIDTH, 0);
+    self.contentScrollView.pagingEnabled = YES;
     
 //    默认第一个
     [self scrollViewDidEndScrollingAnimation:_contentScrollView];
@@ -177,7 +186,7 @@
     NSInteger index = btn.tag;
     
     CGPoint offset = self.contentScrollView.contentOffset;
-    offset.x = index * YQScreenWidth;
+    offset.x = index * YQSCREEN_WIDTH;
     
     [self.contentScrollView setContentOffset:offset animated:YES];
     
@@ -198,6 +207,16 @@
    
     NSInteger index = offsetX / scrollView.width ;
     
+//    给titleScrollview添加偏移量
+    CGPoint titleOffset = scrollView.contentOffset;
+    NSInteger i = offsetX / YQSCREEN_WIDTH;
+    if (i >= 3 && i <= 5) {
+        titleOffset.x = (i - 2) * 72;
+        [self.titleScrollView setContentOffset:titleOffset animated:YES];
+    }else if (i >= 5){
+        titleOffset.x = 3 * 72;
+        [self.titleScrollView setContentOffset:titleOffset animated:YES];
+    }
 //    将子控制器的view添加到contentScrollview中
     UITableViewController *willShowVc = self.childViewControllers[index];
     
@@ -226,6 +245,10 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-
+   [self scrollViewDidEndScrollingAnimation:scrollView];
+    
+    //标签栏内的按钮随着滚动
+    NSInteger index = self.contentScrollView.contentOffset.x / scrollView.width;
+    [self btnClick:self.titleScrollView.subviews[index]];
 }
 @end

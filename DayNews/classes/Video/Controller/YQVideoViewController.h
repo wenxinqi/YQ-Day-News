@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YQVideoViewController : UIViewController
+@interface YQVideoViewController : UITableViewController
 
 @end
