@@ -7,10 +7,14 @@
 //
 
 #import "YQVideoTableViewCell.h"
+#import "YQVideoData.h"
+
+
+
 
 @interface YQVideoTableViewCell()
 @property (weak, nonatomic) IBOutlet UILabel *videoTitle;
-@property (weak, nonatomic) IBOutlet UILabel *lengrhTime;
+@property (weak, nonatomic) IBOutlet UILabel *lengthTime;
 @property (weak, nonatomic) IBOutlet UIImageView *topicImageView;
 @property (weak, nonatomic) IBOutlet UILabel *topicLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -20,12 +24,22 @@
 
 @implementation YQVideoTableViewCell
 
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     
 }
 
+//对属性videoData添加set方法
+- (void)setVideoData:(YQVideoData *)videoData
+{
+    self.videoData = videoData;
 
-
+//     给模型数据赋值
+    _videoTitle.text = videoData.videoTitle;
+    _lengthTime.text = videoData.lengthTime;
+    [_topicImageView sd_setImageWithURL:[NSURL URLWithString:videoData.topicImage]];
+    _topicLabel.text = videoData.topicTitle;
+    _dateLabel.text = videoData.videoDate;
+   
+}
 @end

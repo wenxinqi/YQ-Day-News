@@ -12,10 +12,20 @@
 
 @interface YQVideoViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+//创建一个可变数组存放请求返回的数据
+@property (nonatomic , strong) NSMutableArray *videoDateArray;
 @end
 
 @implementation YQVideoViewController
 
+//对videoDateArray懒加载
+- (NSMutableArray *)videoDateArray
+{
+    if (_videoDateArray == nil ) {
+        _videoDateArray = [NSMutableArray array];
+    }
+    return _videoDateArray;
+}
 
 /**
  1、添加一个headerview 
@@ -28,6 +38,22 @@
 //    tableView的基本设置
     [self setupTableView];
   
+}
+
+//创建刷新的header和footer
+- (void)setupRefresh
+{
+    
+}
+//下拉刷新
+- (void)loadNewVideo
+{
+
+}
+//上拉刷新
+- (void)loadMoreVideo
+{
+     
 }
 
 static  NSString *YQVideoCellID = @"cell";
@@ -62,6 +88,7 @@ static  NSString *YQVideoCellID = @"cell";
 //  YQVideoTableViewCell已经被注册为cell，也就是被初始化了
     YQVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:YQVideoCellID];
     
+    cell.videoData = _videoDateArray[indexPath.row];
 //   取出数据模型
     return cell;
 }

@@ -17,10 +17,16 @@
 @property (nonatomic, copy) NSString *videoTitle;
 
 //video的总时长
-@property (nonatomic, copy) NSString *length;
+@property (nonatomic, copy) NSString *lengthTime;
 
 //topic的image的url
 @property (nonatomic, copy) NSString *topicImage;
+
+//topic的title
+@property (nonatomic, copy) NSString *topicTitle;
+
+//video日期
+@property (nonatomic, copy) NSString *videoDate;
 
 
 @end

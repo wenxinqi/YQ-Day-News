@@ -102,7 +102,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="hdE-dc-SNk" id="Ycp-T9-0ye"/>
-                <outlet property="lengrhTime" destination="7pA-lR-Gfc" id="eG3-P5-rqt"/>
+                <outlet property="lengthTime" destination="7pA-lR-Gfc" id="ibj-3D-TAs"/>
                 <outlet property="topicImageView" destination="KPz-G0-V7G" id="xY4-8n-EuJ"/>
                 <outlet property="topicLabel" destination="i7I-Nb-gIX" id="1cW-pf-sva"/>
                 <outlet property="videoTitle" destination="Frz-Yz-bte" id="9sW-VK-psH"/>
