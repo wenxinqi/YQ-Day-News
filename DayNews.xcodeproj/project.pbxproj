@@ -36,7 +36,6 @@
 		55D269051F57F8A20085ED44 /* YQPictureData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269041F57F8A20085ED44 /* YQPictureData.m */; };
 		55D269211F5837D20085ED44 /* YQPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269201F5837D20085ED44 /* YQPhotoItem.m */; };
 		55D269231F5837DE0085ED44 /* YQPhotoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55D269221F5837DE0085ED44 /* YQPhotoItem.xib */; };
-		55D269291F5C1C9E0085ED44 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269281F5C1C9E0085ED44 /* HMWaterflowLayout.m */; };
 		55D833101F514F5C00AA580B /* NSDate+YQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D8330F1F514F5C00AA580B /* NSDate+YQExtension.m */; };
 		55D833261F526B8700AA580B /* YQFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D833251F526B8700AA580B /* YQFullViewController.m */; };
 		55D833311F52F47F00AA580B /* YQRefreshGifController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D833301F52F47F00AA580B /* YQRefreshGifController.m */; };
@@ -122,8 +121,6 @@
 		55D2691F1F5837D20085ED44 /* YQPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQPhotoItem.h; sourceTree = "<group>"; };
 		55D269201F5837D20085ED44 /* YQPhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQPhotoItem.m; sourceTree = "<group>"; };
 		55D269221F5837DE0085ED44 /* YQPhotoItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQPhotoItem.xib; sourceTree = "<group>"; };
-		55D269271F5C1C9E0085ED44 /* HMWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWaterflowLayout.h; sourceTree = "<group>"; };
-		55D269281F5C1C9E0085ED44 /* HMWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWaterflowLayout.m; sourceTree = "<group>"; };
 		55D8330E1F514F5C00AA580B /* NSDate+YQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YQExtension.h"; sourceTree = "<group>"; };
 		55D8330F1F514F5C00AA580B /* NSDate+YQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YQExtension.m"; sourceTree = "<group>"; };
 		55D833241F526B8700AA580B /* YQFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQFullViewController.h; sourceTree = "<group>"; };
@@ -287,8 +284,6 @@
 			children = (
 				55D268FD1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.h */,
 				55D268FE1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.m */,
-				55D269271F5C1C9E0085ED44 /* HMWaterflowLayout.h */,
-				55D269281F5C1C9E0085ED44 /* HMWaterflowLayout.m */,
 				55D269031F57F8A20085ED44 /* YQPictureData.h */,
 				55D269041F57F8A20085ED44 /* YQPictureData.m */,
 			);
@@ -683,7 +678,6 @@
 				55D833101F514F5C00AA580B /* NSDate+YQExtension.m in Sources */,
 				55B4E2F11F1F59A3009DF7BA /* AppDelegate.m in Sources */,
 				55B2C64F1F30A60A00E25928 /* YQVerticalButton.m in Sources */,
-				55D269291F5C1C9E0085ED44 /* HMWaterflowLayout.m in Sources */,
 				554726001F4EB1D4002D2E9A /* YQRequestTool.m in Sources */,
 				552702851F234E8600FF1908 /* YQNavigationController.m in Sources */,
 				5527028C1F2350D700FF1908 /* YQHeaderView.m in Sources */,
