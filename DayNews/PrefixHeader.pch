@@ -9,21 +9,36 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "UIView+YQExtension.h"
+
 #import "YQNavigationController.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
 #import "MJExtension.h"
 #import "AFNetworking.h"
+
+
+//自定义工具类
+#import "NSDate+YQExtension.h"
 #import "YQConst.h"
+#import "YQRequestTool.h"
+#import "YQRefreshGifController.h"
+#import "NSString+YQExtension.h"
+#import "YQVerticalButton.h"
+#import "UIBarButtonItem+YQExtension.h"
+#import "UIView+YQExtension.h"
+#import "YQHTTPSessionManager.h"
 
 #define YQSCREEN_WIDTH                    ([UIScreen mainScreen].bounds.size.width)
 #define YQSCREEN_HEIGHT                   ([UIScreen mainScreen].bounds.size.height)
+#define YQRGBA(r,g,b,a)                   ([UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a])
+#define YQVideoCellHeight   260
+#define YQVideoCellMargin   10
+#define YQApplicationWindow                 [[UIApplication sharedApplication] delegate].window
 
 #ifdef DEBUG
-#define DLog(...) NSLog(@"%s(第%d行) %@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#define YQLog(...) NSLog(@"%s(第%d行) %@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
 #else
-#define DLog(...)
+#define YQLog(...)
 #endif
 
 #endif /* PrefixHeader_pch */

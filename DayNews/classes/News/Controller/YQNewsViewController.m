@@ -102,7 +102,14 @@
     [titleView addSubview:titleScrollview];
 
     
-//    往titleScrollview中添加button
+//创建一个按钮指示器
+//    UIView *indicatorV = [[UIView alloc] init];
+//    indicatorV.y = 62;
+//    indicatorV.height = 2;
+//    indicatorV.width = 50;
+//    indicatorV.backgroundColor = [UIColor redColor];
+
+    //    往titleScrollview中添加button
     //创建一个数组存放btn的textlabel
     CGFloat btnX ;
     CGFloat btnW = 72;
@@ -134,8 +141,14 @@
 //            当前被选中的btn
             self.selectedBtn = btn;
         }
+        
+//        [UIView animateWithDuration:0.3 animations:^{
+//            indicatorV.centerX = self.selectedBtn.centerX;
+//        }];
     }
     
+//    [self.titleScrollView addSubview:indicatorV];
+//    [titleView insertSubview:indicatorV aboveSubview:titleScrollview];
     //设置titleScrollView的contentsize
     self.titleScrollView.contentSize = CGSizeMake(btnW * btnNames.count, 0);
 }
@@ -162,7 +175,7 @@
     contentScrollView.delegate = self;
     
 //    设置contentScrollView的contentsize,设置哪个为0，则这个方向上不能滚动
-    self.contentScrollView.contentSize = CGSizeMake(self.childViewControllers.count * YQSCREEN_WIDTH, 0);
+    self.contentScrollView.contentSize = CGSizeMake((self.childViewControllers.count-1) * YQSCREEN_WIDTH, 0);
     self.contentScrollView.pagingEnabled = YES;
     
 //    默认第一个
@@ -207,14 +220,15 @@
    
     NSInteger index = offsetX / scrollView.width ;
     
+
 //    给titleScrollview添加偏移量
     CGPoint titleOffset = scrollView.contentOffset;
     NSInteger i = offsetX / YQSCREEN_WIDTH;
-    if (i >= 3 && i <= 5) {
+    if (i >= 2 && i <= 5) {
         titleOffset.x = (i - 2) * 72;
         [self.titleScrollView setContentOffset:titleOffset animated:YES];
     }else if (i >= 5){
-        titleOffset.x = 3 * 72;
+        titleOffset.x = 3 * 80;
         [self.titleScrollView setContentOffset:titleOffset animated:YES];
     }
 //    将子控制器的view添加到contentScrollview中

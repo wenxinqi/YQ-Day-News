@@ -14,13 +14,35 @@
 
 @implementation YQSocialViewController
 
+/**
+ topScrollview:http://c.m.163.com/nc/article/headline/T1348647853363/0-10.html
+ NewsCell : http://c.m.163.com/nc/article/headline/T1348647853363/%d-20.html
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    tableview的基本设置
+    [self setupTableView];
     
-    self.tableView.showsHorizontalScrollIndicator = NO;
-    self.tableView.showsVerticalScrollIndicator = NO;
+//    数据刷新
+    [self setupRefresh];
 }
 
+- (void)setupRefresh
+{
+    //    self.tableView.showsHorizontalScrollIndicator = NO;
+    //    self.tableView.showsVerticalScrollIndicator = NO;
+//    [[YQRequestTool shareRequestTool] setupRequestWithParameters:nil getPath:nil sussce:^(id responseObject) {
+//        
+//    } failure:^(id error) {
+//        
+//    }];
+}
+- (void)setupTableView
+{
+
+}
+
+#pragma mark 数据源方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 50;

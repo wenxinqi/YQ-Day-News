@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+
+
+
 @class YQVideoData;
 @interface YQVideoTableViewCell : UITableViewCell
 
+//模型数组
 @property (nonatomic , strong) YQVideoData *videoData;
+
+
+
+//+ (instancetype)cellWithTableView:(UITableView *)tableView;
 
 @end
