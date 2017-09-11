@@ -17,7 +17,7 @@
     
     NSMutableArray *idleImages = [NSMutableArray array];
     for (NSInteger i = 1 ; i <= 60 ; i++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%ld",i]];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%ld",(long)i]];
         [idleImages addObject:image];
     }
     

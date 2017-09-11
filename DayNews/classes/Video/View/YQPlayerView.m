@@ -96,7 +96,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+//    布局视图，当是全屏状态时填充整个界面
     self.playerLayer.frame = self.bounds;
 }
 
@@ -134,10 +134,13 @@
 //    将mp4——url转成playerItem，资源来自网络
     
     if ([self.mp4_url rangeOfString:@"http"].location != NSNotFound) {
+        
         AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:[self.mp4_url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
+        
         self.playerItem = playerItem;
         return playerItem;
     }else {
+        
 //        资源来自本地
         AVAsset *asset =  [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:self.mp4_url] options:nil];
         AVPlayerItem *playItem = [AVPlayerItem playerItemWithAsset:asset];
@@ -166,7 +169,7 @@
     sender.selected = !sender.isSelected;
     self.isFullScreen = sender.selected;
     if ([self.delegate respondsToSelector:@selector(videoPlayerScreenOrientation:)]) {
-//        告诉代理做事
+//        当代理实现代理方法时，将sender.selected作为值进行传递。
         [self.delegate videoPlayerScreenOrientation:sender.selected];
     }
     
@@ -233,7 +236,7 @@
     NSInteger cSec = (NSInteger)currentTime % 60;
     
 //    NSString *durationString = [NSString stringWithFormat:@"%02ld:%02ld", dMin, dSec];
-    NSString *currentString = [NSString stringWithFormat:@"%02ld:%02ld", cMin, cSec];
+    NSString *currentString = [NSString stringWithFormat:@"%02ld:%02ld", (long)cMin, (long)cSec];
     
 //    return [NSString stringWithFormat:@"%@/%@", currentString, durationString];
     return [NSString stringWithFormat:@"%@", currentString];

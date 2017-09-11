@@ -35,6 +35,7 @@
 #define YQVideoCellMargin   10
 #define YQApplicationWindow                 [[UIApplication sharedApplication] delegate].window
 
+#define IMP_BLOCK_SELF(type)                __block type *block_self = self;
 #ifdef DEBUG
 #define YQLog(...) NSLog(@"%s(第%d行) %@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
 #else

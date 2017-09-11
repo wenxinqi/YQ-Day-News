@@ -12,7 +12,7 @@
 
 //添加一个属性，判断该界面是否显示了
 @property (nonatomic,getter=isShow) BOOL isShow;
-@property (nonatomic, copy)void(^removeBlock)();
+
 
 - (void)addItemView;
 - (void)removeItemView;

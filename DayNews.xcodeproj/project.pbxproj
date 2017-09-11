@@ -36,6 +36,20 @@
 		55D269051F57F8A20085ED44 /* YQPictureData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269041F57F8A20085ED44 /* YQPictureData.m */; };
 		55D269211F5837D20085ED44 /* YQPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269201F5837D20085ED44 /* YQPhotoItem.m */; };
 		55D269231F5837DE0085ED44 /* YQPhotoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55D269221F5837DE0085ED44 /* YQPhotoItem.xib */; };
+		55D26B721F5D72410085ED44 /* CycleBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B6F1F5D72410085ED44 /* CycleBannerCell.m */; };
+		55D26B731F5D72410085ED44 /* CycleBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B711F5D72410085ED44 /* CycleBannerView.m */; };
+		55D26B761F5D72850085ED44 /* YQTopBannerDaTa.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B751F5D72850085ED44 /* YQTopBannerDaTa.m */; };
+		55D26B791F5D821E0085ED44 /* YQShowTopBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B781F5D821E0085ED44 /* YQShowTopBannerController.m */; };
+		55D26B7C1F5E79E60085ED44 /* YQTotalDaTaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B7B1F5E79E60085ED44 /* YQTotalDaTaModel.m */; };
+		55D26B7F1F5E7BC70085ED44 /* YQDetailWebData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B7E1F5E7BC70085ED44 /* YQDetailWebData.m */; };
+		55D26B821F5E7C400085ED44 /* YQDetailWebImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B811F5E7C400085ED44 /* YQDetailWebImageData.m */; };
+		55D26B851F5E7EEC0085ED44 /* YQNewsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B841F5E7EEC0085ED44 /* YQNewsData.m */; };
+		55D26B881F5E7FE90085ED44 /* YQNewsFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B871F5E7FE90085ED44 /* YQNewsFrame.m */; };
+		55D26B8B1F5E8BBB0085ED44 /* YQNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B8A1F5E8BBB0085ED44 /* YQNewsCell.m */; };
+		55D26B8E1F5E90A50085ED44 /* YQImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B8D1F5E90A50085ED44 /* YQImagesCell.m */; };
+		55D26B911F5E93470085ED44 /* YQBigImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B901F5E93470085ED44 /* YQBigImageCell.m */; };
+		55D26B941F5E94340085ED44 /* YQTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B931F5E94340085ED44 /* YQTopCell.m */; };
+		55D26B971F5E97270085ED44 /* YQDetailWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D26B961F5E97270085ED44 /* YQDetailWebController.m */; };
 		55D833101F514F5C00AA580B /* NSDate+YQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D8330F1F514F5C00AA580B /* NSDate+YQExtension.m */; };
 		55D833261F526B8700AA580B /* YQFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D833251F526B8700AA580B /* YQFullViewController.m */; };
 		55D833311F52F47F00AA580B /* YQRefreshGifController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D833301F52F47F00AA580B /* YQRefreshGifController.m */; };
@@ -121,10 +135,38 @@
 		55D2691F1F5837D20085ED44 /* YQPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQPhotoItem.h; sourceTree = "<group>"; };
 		55D269201F5837D20085ED44 /* YQPhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQPhotoItem.m; sourceTree = "<group>"; };
 		55D269221F5837DE0085ED44 /* YQPhotoItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQPhotoItem.xib; sourceTree = "<group>"; };
+		55D26B6E1F5D72410085ED44 /* CycleBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleBannerCell.h; sourceTree = "<group>"; };
+		55D26B6F1F5D72410085ED44 /* CycleBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleBannerCell.m; sourceTree = "<group>"; };
+		55D26B701F5D72410085ED44 /* CycleBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleBannerView.h; sourceTree = "<group>"; };
+		55D26B711F5D72410085ED44 /* CycleBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleBannerView.m; sourceTree = "<group>"; };
+		55D26B741F5D72850085ED44 /* YQTopBannerDaTa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQTopBannerDaTa.h; sourceTree = "<group>"; };
+		55D26B751F5D72850085ED44 /* YQTopBannerDaTa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQTopBannerDaTa.m; sourceTree = "<group>"; };
+		55D26B771F5D821E0085ED44 /* YQShowTopBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQShowTopBannerController.h; sourceTree = "<group>"; };
+		55D26B781F5D821E0085ED44 /* YQShowTopBannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQShowTopBannerController.m; sourceTree = "<group>"; };
+		55D26B7A1F5E79E60085ED44 /* YQTotalDaTaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQTotalDaTaModel.h; sourceTree = "<group>"; };
+		55D26B7B1F5E79E60085ED44 /* YQTotalDaTaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQTotalDaTaModel.m; sourceTree = "<group>"; };
+		55D26B7D1F5E7BC70085ED44 /* YQDetailWebData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQDetailWebData.h; sourceTree = "<group>"; };
+		55D26B7E1F5E7BC70085ED44 /* YQDetailWebData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDetailWebData.m; sourceTree = "<group>"; };
+		55D26B801F5E7C400085ED44 /* YQDetailWebImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQDetailWebImageData.h; sourceTree = "<group>"; };
+		55D26B811F5E7C400085ED44 /* YQDetailWebImageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDetailWebImageData.m; sourceTree = "<group>"; };
+		55D26B831F5E7EEC0085ED44 /* YQNewsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNewsData.h; sourceTree = "<group>"; };
+		55D26B841F5E7EEC0085ED44 /* YQNewsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNewsData.m; sourceTree = "<group>"; };
+		55D26B861F5E7FE90085ED44 /* YQNewsFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNewsFrame.h; sourceTree = "<group>"; };
+		55D26B871F5E7FE90085ED44 /* YQNewsFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNewsFrame.m; sourceTree = "<group>"; };
+		55D26B891F5E8BBB0085ED44 /* YQNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNewsCell.h; sourceTree = "<group>"; };
+		55D26B8A1F5E8BBB0085ED44 /* YQNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNewsCell.m; sourceTree = "<group>"; };
+		55D26B8C1F5E90A50085ED44 /* YQImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQImagesCell.h; sourceTree = "<group>"; };
+		55D26B8D1F5E90A50085ED44 /* YQImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQImagesCell.m; sourceTree = "<group>"; };
+		55D26B8F1F5E93470085ED44 /* YQBigImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQBigImageCell.h; sourceTree = "<group>"; };
+		55D26B901F5E93470085ED44 /* YQBigImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQBigImageCell.m; sourceTree = "<group>"; };
+		55D26B921F5E94340085ED44 /* YQTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQTopCell.h; sourceTree = "<group>"; };
+		55D26B931F5E94340085ED44 /* YQTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQTopCell.m; sourceTree = "<group>"; };
+		55D26B951F5E97270085ED44 /* YQDetailWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQDetailWebController.h; sourceTree = "<group>"; };
+		55D26B961F5E97270085ED44 /* YQDetailWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDetailWebController.m; sourceTree = "<group>"; };
 		55D8330E1F514F5C00AA580B /* NSDate+YQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YQExtension.h"; sourceTree = "<group>"; };
 		55D8330F1F514F5C00AA580B /* NSDate+YQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YQExtension.m"; sourceTree = "<group>"; };
-		55D833241F526B8700AA580B /* YQFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQFullViewController.h; sourceTree = "<group>"; };
-		55D833251F526B8700AA580B /* YQFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQFullViewController.m; sourceTree = "<group>"; };
+		55D833241F526B8700AA580B /* YQFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YQFullViewController.h; path = ../View/YQFullViewController.h; sourceTree = "<group>"; };
+		55D833251F526B8700AA580B /* YQFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YQFullViewController.m; path = ../View/YQFullViewController.m; sourceTree = "<group>"; };
 		55D8332F1F52F47F00AA580B /* YQRefreshGifController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQRefreshGifController.h; sourceTree = "<group>"; };
 		55D833301F52F47F00AA580B /* YQRefreshGifController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQRefreshGifController.m; sourceTree = "<group>"; };
 		55E700F91F28CD3100397EAB /* UIView+YQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+YQExtension.h"; path = "News/Controller/UIView+YQExtension.h"; sourceTree = "<group>"; };
@@ -174,6 +216,7 @@
 		552702631F234E8600FF1908 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				55D26B6D1F5D72410085ED44 /* CycleBannerView */,
 				554725FD1F4EB139002D2E9A /* customTool */,
 				552702641F234E8600FF1908 /* Main */,
 				5527026C1F234E8600FF1908 /* Video */,
@@ -246,6 +289,8 @@
 			children = (
 				5527026F1F234E8600FF1908 /* YQVideoViewController.h */,
 				552702701F234E8600FF1908 /* YQVideoViewController.m */,
+				55D833241F526B8700AA580B /* YQFullViewController.h */,
+				55D833251F526B8700AA580B /* YQFullViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,8 +308,6 @@
 				55EE8D9E1F4FFD59003FEE90 /* YQPlayerView.h */,
 				55EE8D9F1F4FFD59003FEE90 /* YQPlayerView.m */,
 				55EE8DA11F4FFD68003FEE90 /* YQPlayerView.xib */,
-				55D833241F526B8700AA580B /* YQFullViewController.h */,
-				55D833251F526B8700AA580B /* YQFullViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -360,6 +403,18 @@
 		5527027F1F234E8600FF1908 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55D26B831F5E7EEC0085ED44 /* YQNewsData.h */,
+				55D26B841F5E7EEC0085ED44 /* YQNewsData.m */,
+				55D26B861F5E7FE90085ED44 /* YQNewsFrame.h */,
+				55D26B871F5E7FE90085ED44 /* YQNewsFrame.m */,
+				55D26B741F5D72850085ED44 /* YQTopBannerDaTa.h */,
+				55D26B751F5D72850085ED44 /* YQTopBannerDaTa.m */,
+				55D26B7A1F5E79E60085ED44 /* YQTotalDaTaModel.h */,
+				55D26B7B1F5E79E60085ED44 /* YQTotalDaTaModel.m */,
+				55D26B7D1F5E7BC70085ED44 /* YQDetailWebData.h */,
+				55D26B7E1F5E7BC70085ED44 /* YQDetailWebData.m */,
+				55D26B801F5E7C400085ED44 /* YQDetailWebImageData.h */,
+				55D26B811F5E7C400085ED44 /* YQDetailWebImageData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +426,10 @@
 				552702821F234E8600FF1908 /* YQNewsViewController.m */,
 				55E701021F2A1D8200397EAB /* YQSocialViewController.h */,
 				55E701031F2A1D8200397EAB /* YQSocialViewController.m */,
+				55D26B771F5D821E0085ED44 /* YQShowTopBannerController.h */,
+				55D26B781F5D821E0085ED44 /* YQShowTopBannerController.m */,
+				55D26B951F5E97270085ED44 /* YQDetailWebController.h */,
+				55D26B961F5E97270085ED44 /* YQDetailWebController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -378,6 +437,14 @@
 		552702831F234E8600FF1908 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55D26B891F5E8BBB0085ED44 /* YQNewsCell.h */,
+				55D26B8A1F5E8BBB0085ED44 /* YQNewsCell.m */,
+				55D26B8C1F5E90A50085ED44 /* YQImagesCell.h */,
+				55D26B8D1F5E90A50085ED44 /* YQImagesCell.m */,
+				55D26B8F1F5E93470085ED44 /* YQBigImageCell.h */,
+				55D26B901F5E93470085ED44 /* YQBigImageCell.m */,
+				55D26B921F5E94340085ED44 /* YQTopCell.h */,
+				55D26B931F5E94340085ED44 /* YQTopCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -462,6 +529,17 @@
 				55B4E3131F1F59A3009DF7BA /* Info.plist */,
 			);
 			path = DayNewsUITests;
+			sourceTree = "<group>";
+		};
+		55D26B6D1F5D72410085ED44 /* CycleBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				55D26B6E1F5D72410085ED44 /* CycleBannerCell.h */,
+				55D26B6F1F5D72410085ED44 /* CycleBannerCell.m */,
+				55D26B701F5D72410085ED44 /* CycleBannerView.h */,
+				55D26B711F5D72410085ED44 /* CycleBannerView.m */,
+			);
+			path = CycleBannerView;
 			sourceTree = "<group>";
 		};
 		CEB01275553C394589979A13 /* Pods */ = {
@@ -660,6 +738,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D26B941F5E94340085ED44 /* YQTopCell.m in Sources */,
 				5584A75F1F555D6000D06BD0 /* YQShowItemView.m in Sources */,
 				552702841F234E8600FF1908 /* YQTabBarController.m in Sources */,
 				55E700FB1F28CD3100397EAB /* UIView+YQExtension.m in Sources */,
@@ -667,10 +746,17 @@
 				552702881F234E8600FF1908 /* YQMeViewController.m in Sources */,
 				552702871F234E8600FF1908 /* YQPictureViewController.m in Sources */,
 				5584A7591F554B6300D06BD0 /* UIBarButtonItem+YQExtension.m in Sources */,
+				55D26B731F5D72410085ED44 /* CycleBannerView.m in Sources */,
 				55B7CCDE1F36E17800451745 /* YQVideoTableViewCell.m in Sources */,
 				55D833261F526B8700AA580B /* YQFullViewController.m in Sources */,
+				55D26B911F5E93470085ED44 /* YQBigImageCell.m in Sources */,
+				55D26B761F5D72850085ED44 /* YQTopBannerDaTa.m in Sources */,
+				55D26B721F5D72410085ED44 /* CycleBannerCell.m in Sources */,
 				55B7CE111F3835DD00451745 /* YQConst.m in Sources */,
+				55D26B821F5E7C400085ED44 /* YQDetailWebImageData.m in Sources */,
 				55B2C64C1F30A0BA00E25928 /* YQVideoHeaderView.m in Sources */,
+				55D26B881F5E7FE90085ED44 /* YQNewsFrame.m in Sources */,
+				55D26B791F5D821E0085ED44 /* YQShowTopBannerController.m in Sources */,
 				552702891F234E8600FF1908 /* YQNewsViewController.m in Sources */,
 				55B7CCDA1F36E13100451745 /* YQVideoData.m in Sources */,
 				55D833311F52F47F00AA580B /* YQRefreshGifController.m in Sources */,
@@ -681,11 +767,17 @@
 				554726001F4EB1D4002D2E9A /* YQRequestTool.m in Sources */,
 				552702851F234E8600FF1908 /* YQNavigationController.m in Sources */,
 				5527028C1F2350D700FF1908 /* YQHeaderView.m in Sources */,
+				55D26B971F5E97270085ED44 /* YQDetailWebController.m in Sources */,
 				5584A75C1F55576B00D06BD0 /* NSString+YQExtension.m in Sources */,
+				55D26B7C1F5E79E60085ED44 /* YQTotalDaTaModel.m in Sources */,
 				55EE8DA01F4FFD59003FEE90 /* YQPlayerView.m in Sources */,
 				55D269051F57F8A20085ED44 /* YQPictureData.m in Sources */,
 				55B4E2EE1F1F59A3009DF7BA /* main.m in Sources */,
+				55D26B8E1F5E90A50085ED44 /* YQImagesCell.m in Sources */,
 				552702861F234E8600FF1908 /* YQVideoViewController.m in Sources */,
+				55D26B851F5E7EEC0085ED44 /* YQNewsData.m in Sources */,
+				55D26B8B1F5E8BBB0085ED44 /* YQNewsCell.m in Sources */,
+				55D26B7F1F5E7BC70085ED44 /* YQDetailWebData.m in Sources */,
 				55D269021F57F72F0085ED44 /* YQHTTPSessionManager.m in Sources */,
 				55D268FF1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.m in Sources */,
 			);
@@ -829,7 +921,7 @@
 				);
 				GCC_PREFIX_HEADER = DayNews/PrefixHeader.pch;
 				INFOPLIST_FILE = DayNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -856,7 +948,7 @@
 				);
 				GCC_PREFIX_HEADER = DayNews/PrefixHeader.pch;
 				INFOPLIST_FILE = DayNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

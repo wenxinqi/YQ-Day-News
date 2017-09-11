@@ -51,7 +51,7 @@ static id _instance;
 //      YQLog(@" %@ , %@",path , responseObject);
       sussce(responseObject);
   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//      YQLog(@" %@ , %@",path ,error);
+      YQLog(@" %@ , %@",path ,error);
       failure(error);
     }];
 }

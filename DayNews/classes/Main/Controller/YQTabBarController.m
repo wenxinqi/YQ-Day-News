@@ -35,13 +35,10 @@
     [item setTitleTextAttributes:selectAtrrs forState:UIControlStateSelected];
     
     //给tabbar添加子控制器
+    [self setChildVc:[[YQNewsViewController alloc] init] Title:@"新闻" image:@"tabbar_news" selectedImage:@"tabbar_news_hl"];
     [self setChildVc:[[YQPictureViewController alloc] init] Title:@"图片" image:@"tabbar_picture" selectedImage:@"tabbar_picture_hl"];
     [self setChildVc:[[YQVideoViewController alloc] init] Title:@"视频" image:@"tabbar_video" selectedImage:@"tabbar_video_hl"];
     
- 
-    
-    [self setChildVc:[[YQNewsViewController alloc] init] Title:@"新闻" image:@"tabbar_news" selectedImage:@"tabbar_news_hl"];
-
     [self setChildVc:[[YQMeViewController alloc] init] Title:@"我" image:@"tabbar_setting" selectedImage:@"tabbar_setting_hl"];
     
    

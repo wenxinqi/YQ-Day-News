@@ -24,10 +24,10 @@
     YQTabBarController *tabBarVc = [[YQTabBarController alloc] init];
     tabBarVc.tabBar.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha: 1];
     
-    self.window.rootViewController = tabBarVc;
-    
+//    self.window.rootViewController = tabBarVc;
     
     [self.window makeKeyAndVisible];
+    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
      
     return YES;
 }

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIBarButtonItem (YQExtension)
++ (UIBarButtonItem *)ItemWithIcon:(NSString *)icon highIcon:(NSString *)highIcon target:(id)target action:(SEL)action;
 + (UIBarButtonItem *)itemWithImageAndTitle:(NSString *)title image:(NSString *)imageName target:(id)target Selector:(SEL)action;
 @end

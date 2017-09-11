@@ -15,7 +15,7 @@
 #import "YQFullViewController.h"
 
 
-
+#warning 显示的网页有重复元素
 #define rgba(r,g,b,a)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 @interface YQVideoViewController ()<UITableViewDelegate,UITableViewDataSource,YQVideoFullScreenDelegate>
@@ -65,7 +65,6 @@
 - (void)setupRefresh
 {
 //    设置count==0 ， 刷新首页
-    self.count = 0;
     
 //  header
     YQRefreshGifController *header = [YQRefreshGifController headerWithRefreshingBlock:^{
@@ -74,8 +73,6 @@
     }];
 
     self.tableView.mj_header = header;
-    
-    
     
 //    自动调整header的透明度
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
@@ -111,13 +108,15 @@
         
         NSMutableArray *statusArray = [NSMutableArray array];
         for (YQVideoData *DataArray in videoArray) {
-            [statusArray addObject:DataArray];
+                [statusArray addObject:DataArray];
         }
+
         if (self.count == 0) {
             self.videoDateArray = statusArray;
         }else{
             [self.videoDateArray addObjectsFromArray:statusArray];
         }
+        
 //        加载下一页，一页的内容个数为10
         weak_self.count += 10;
 //        数据更新：tableview刷新

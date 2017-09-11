@@ -10,6 +10,15 @@
 #import "YQShowItemView.h"
 
 @implementation UIBarButtonItem (YQExtension)
++ (UIBarButtonItem *)ItemWithIcon:(NSString *)icon highIcon:(NSString *)highIcon target:(id)target action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setBackgroundImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:highIcon] forState:UIControlStateHighlighted];
+    button.frame = (CGRect){CGPointZero,button.currentBackgroundImage.size};
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc]initWithCustomView:button];
+}
 //添加一个类方法
 + (UIBarButtonItem *)itemWithImageAndTitle:(NSString *)title image:(NSString *)imageName target:(id)target Selector:(SEL)action
 {

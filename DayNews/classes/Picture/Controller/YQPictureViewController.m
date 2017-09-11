@@ -60,10 +60,7 @@ static NSString * const YQPictureID = @"picture";
     };
     
 #warning 创建collectionview时必须初始化flowlayout。不然flowlayout会显示为nil
-    
     UICollectionView *collectionV = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:waterFlowLayout];
-    YQLog(@"%@",[NSValue valueWithCGRect:self.view.bounds]);
-    
     collectionV.dataSource = self;
     collectionV.delegate = self;
     collectionV.backgroundColor = [UIColor whiteColor];
@@ -94,16 +91,19 @@ static NSString * const YQPictureID = @"picture";
 
 - (void)loadData
 {
-    self.tag1 = @"美女";
+    self.tag1 = @"宠物";
     self.tag2 = @"全部";
 
+    
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     dic[@"pn"] = [NSString stringWithFormat:@"%d",self.pn];
     dic[@"rn"] = @60;
     
     NSString *urlstr = [NSString stringWithFormat:@"http://image.baidu.com/wisebrowse/data?tag1=%@&tag2=%@",self.tag1,self.tag2];
     
-    urlstr = [urlstr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    urlstr = [urlstr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+#warning   将你的URL的字符进行转义。
+    urlstr = [urlstr stringByAddingPercentEncodingWithAllowedCharacters:[NSMutableCharacterSet URLQueryAllowedCharacterSet]];
     
     [[YQRequestTool shareRequestTool] setupRequestWithParameters:dic getPath:urlstr sussce:^(id responseObject) {
         NSArray *dataArray = [YQPictureData mj_objectArrayWithKeyValuesArray:responseObject[@"imgs"]];

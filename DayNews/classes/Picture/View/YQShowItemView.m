@@ -56,9 +56,9 @@
 {
         [self removeFromSuperview];
         self.isShow = NO;
-        if (self.removeBlock) {
-            self.removeBlock();
-        }
+//        if (self.removeBlock) {
+//            self.removeBlock();
+//        }
     
 }
 @end
