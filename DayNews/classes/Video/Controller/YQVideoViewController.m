@@ -132,7 +132,6 @@
 }
 
 //初始化tableView
-
 static NSString *ID = @"cell";
 - (void)setupTableView
 {

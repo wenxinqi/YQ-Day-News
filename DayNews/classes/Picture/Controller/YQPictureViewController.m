@@ -29,6 +29,7 @@
 @implementation YQPictureViewController
 
 static NSString * const YQPictureID = @"picture";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -120,7 +121,7 @@ static NSString * const YQPictureID = @"picture";
             [self.pictureArray addObjectsFromArray:pictureArray];
         }
         self.pn += 60;
-#warning 数据请求后一定要刷新collection
+#warning 数据请求后一定要刷新collectionView
         [self.collectionView reloadData];
         [self.collectionView.mj_header endRefreshing];
         [self.collectionView.mj_footer endRefreshing];

@@ -9,7 +9,7 @@
 #import "YQHTTPSessionManager.h"
 
 @implementation YQHTTPSessionManager
-#warning 添加字类，使之可以处理html的反回数据类型
+#warning 添加子类，使之可以处理html的返回数据类型
 + (instancetype)manager {
     
     YQHTTPSessionManager *mgr = [super manager];

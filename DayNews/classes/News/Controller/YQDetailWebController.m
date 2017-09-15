@@ -57,7 +57,7 @@
     [fenxiangB setTitle:@"分享" forState:UIControlStateNormal];
     [fenxiangB setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     fenxiangB.titleLabel.font = [UIFont systemFontOfSize:13];
-    [fenxiangB addTarget:self action:@selector(fenxiang) forControlEvents:UIControlEventTouchUpInside];
+    //[fenxiangB addTarget:self action:@selector(fenxiang) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:fenxiangB];
     
     UIWebView *webView = [[UIWebView alloc]initWithFrame:self.view.frame];
@@ -179,6 +179,7 @@
 //    }else{
 //        [MBProgressHUD showSuccess:@"保存成功"];
 //    }
+    
 }
 
 
@@ -186,22 +187,11 @@
 - (void)shoucang:(UIButton *)btn
 {
     btn.selected = !btn.selected;
-//    if(btn.selected){
-//        [btn setTitle:@"已收藏" forState:UIControlStateSelected];
-//        [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-//        [DataBase addNews:self.dataModel.title docid:self.dataModel.docid time:[NSDate currentTime]];
-//    }else{
-//        [btn setTitle:@"收藏" forState:UIControlStateNormal];
-//        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//        [DataBase deletetable:self.dataModel.docid];
-//    }
+
 }
 
 
-- (void)fenxiang
-{
-//    [[ShareManager sharedInstance] shareWeiboWithTitle:self.detailModel.title images:nil dismissBlock:nil];
-}
+
 
 
 - (void)backBtnClick
