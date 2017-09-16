@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface YQVideoHeaderView : UIView
-
+@property (nonatomic, copy) void(^selectBtn)(NSInteger tag, NSString *title);
 @end

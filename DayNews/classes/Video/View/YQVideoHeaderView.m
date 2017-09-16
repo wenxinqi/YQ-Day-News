@@ -30,6 +30,8 @@
             [btn setImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
             [btn setTitle:titleNames[i] forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+            btn.tag = i;
             
             [self addSubview:btn];
         }
@@ -50,6 +52,13 @@
     return self;
 }
 
+//点击了按钮
+- (void)btnClick:(UIButton *)btn
+{
+    if (self.selectBtn) {
+        self.selectBtn(btn.tag, btn.titleLabel.text);
+    }
+}
 - (void)awakeFromNib
 {
     [super awakeFromNib];    

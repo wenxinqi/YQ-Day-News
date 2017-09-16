@@ -31,6 +31,12 @@
 //当前选中行
 @property (nonatomic , strong) NSIndexPath *indexPath;
 
+
+//默认的请求行
+@property (nonatomic, copy) NSString *url;
+
+//点击headerView后发送的参数
+@property (nonatomic, copy) NSString *params;
 @end
 
 @implementation YQVideoViewController
@@ -64,12 +70,14 @@
 //创建刷新的header和footer
 - (void)setupRefresh
 {
-//    设置count==0 ， 刷新首页
-    
+//    count==0 ， 刷新首页,默认数据
+    _url = [NSString stringWithFormat:@"http://c.m.163.com/nc/video/home/%d-10.html",self.count];
+    _params = @"videoList";
 //  header
     YQRefreshGifController *header = [YQRefreshGifController headerWithRefreshingBlock:^{
         self.count = 0;
-        [self loadVideoData];
+        [self loadVideoDataWithURL:self.url parameters:self.params];
+        
     }];
 
     self.tableView.mj_header = header;
@@ -86,24 +94,57 @@
 //会导致内存泄漏
     __weak YQVideoViewController *weak_self = self;
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [weak_self loadVideoData];
+        [weak_self loadVideoDataWithURL:self.url parameters:self.params];
+     
     }];
     
 }
-//刷新数据
-- (void)loadVideoData
+
+//初始化tableView
+static NSString *ID = @"cell";
+- (void)setupTableView
 {
-//    先结束刷新状态
+    self.title = @"视频";
+    self.tableView.backgroundColor = rgba(230, 230, 230, 1);
     
-    NSString *url = [NSString stringWithFormat:@"http://c.m.163.com/nc/video/home/%d-10.html",self.count];
+    //    设置tableview的headerview
+    
+    YQVideoHeaderView *videoHeader =  [[YQVideoHeaderView alloc] init];
+    videoHeader.backgroundColor = [UIColor whiteColor];
+    self.tableView.tableHeaderView = videoHeader;
+
+    videoHeader.selectBtn = ^(NSInteger tag,NSString *title){
+        
+        NSArray *arr = @[@"VAP4BFE3U",
+                         @"VAP4BFR16",
+                         @"VAP4BG6DL",
+                         @"VAP4BGTVD"];
+        self.title = title;
+        self.url = [NSString stringWithFormat:@"http://c.3g.163.com/nc/video/list/%@/y/%d-10.html",arr[tag],self.count];
+        self.params = arr[tag];
+        [self.tableView.mj_header beginRefreshing];
+    };
+   
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YQVideoTableViewCell class]) bundle:nil] forCellReuseIdentifier:ID];
+}
+
+//刷新数据
+//@"http://c.3g.163.com/nc/video/list/%@/y/%d-10.html",_url,self.count
+//@"http://c.m.163.com/nc/video/home/%d-10.html",self.count
+- (void)loadVideoDataWithURL:(NSString *)url  parameters:(NSString *)params
+{
+//如果点击了headerView,url有值
+    
+   
 //    发送请求
     
     __weak YQVideoViewController *weak_self = self;
     
     [[YQRequestTool shareRequestTool] setupRequestWithParameters:nil getPath:url sussce:^(id responseObject) {
 
-#warning         将返回数据转为模型数组
-         NSArray *videoArray = [YQVideoData mj_objectArrayWithKeyValuesArray:responseObject[@"videoList"]];
+#warning      将返回数据转为模型数组
+         NSArray *videoArray = [YQVideoData mj_objectArrayWithKeyValuesArray:responseObject[params]];
 //        [self.videoDateArray addObjectsFromArray:videoArray];
         
         NSMutableArray *statusArray = [NSMutableArray array];
@@ -131,24 +172,7 @@
     }];
 }
 
-//初始化tableView
-static NSString *ID = @"cell";
-- (void)setupTableView
-{
-    self.title = @"视频";
-    self.tableView.backgroundColor = rgba(230, 230, 230, 1);
-//    [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1];
-    
-    //    设置tableview的headerview
 
-    YQVideoHeaderView *videoHeader =  [[YQVideoHeaderView alloc] init];
-    videoHeader.backgroundColor = [UIColor whiteColor];
-    self.tableView.tableHeaderView = videoHeader;
-    
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YQVideoTableViewCell class]) bundle:nil] forCellReuseIdentifier:ID];
-}
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -8,6 +8,7 @@
 
 #import "YQPictureViewController.h"
 #import "YQCollectionViewWaterFlowLayout.h"
+#import "YQShowPictureController.h"
 #import "YQShowItemView.h"
 #import "YQPictureData.h"
 #import "YQPhotoItem.h"
@@ -45,9 +46,13 @@ static NSString * const YQPictureID = @"picture";
 
 - (void)setupCollectionView
 {
+    //    默认参数
+    self.tag1 = @"宠物";
+    self.tag2 = @"全部";
+
     self.title = @"图片";
     //    添加一个navigation的右标题按钮
-    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithImageAndTitle:@"汽车" image:@"arrow_up" target:self Selector:@selector(openMenu)];
+    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithImageAndTitle:self.tag1 image:@"arrow_up" target:self Selector:@selector(openMenu)];
     
     self.navigationItem.rightBarButtonItem = rightBarItem;
     
@@ -71,6 +76,7 @@ static NSString * const YQPictureID = @"picture";
     [self.view addSubview:collectionV];
     self.collectionView = collectionV;
     
+    
 }
 
 - (void) setupRefresh
@@ -85,17 +91,14 @@ static NSString * const YQPictureID = @"picture";
     //    当进入这个界面时就刷新
     [self.collectionView.mj_header beginRefreshing];
 
-    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self loadData];
     }];
 }
 
 - (void)loadData
 {
-    self.tag1 = @"宠物";
-    self.tag2 = @"全部";
-
-    
+   
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     dic[@"pn"] = [NSString stringWithFormat:@"%d",self.pn];
     dic[@"rn"] = @60;
@@ -135,12 +138,22 @@ static NSString * const YQPictureID = @"picture";
 //打开菜单
 - (void)openMenu
 {
+
     
     if (self.showItemView.isShow) {
         [self.showItemView removeItemView];
-         self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImageAndTitle:@"汽车" image:@"arrow_up" target:self Selector:@selector(openMenu)];
+       
+         self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImageAndTitle:self.tag1 image:@"arrow_up" target:self Selector:@selector(openMenu)];
     }else{
-        self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImageAndTitle:@"汽车" image:@"arrow_down" target:self Selector:@selector(openMenu)];
+        //    点击btn更新数据
+        __weak YQPictureViewController *weak_self = self;
+        self.showItemView.selectBtn = ^(NSString *title) {
+            weak_self.tag1 = title;
+            weak_self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImageAndTitle:weak_self.tag1 image:@"arrow_down" target:weak_self Selector:@selector(openMenu)];
+            [weak_self.collectionView.mj_header beginRefreshing];
+            [weak_self.showItemView removeItemView];
+        };
+        
         [self.showItemView addItemView];
     }
 }
@@ -168,6 +181,12 @@ static NSString * const YQPictureID = @"picture";
 {
 //当点击时移除itemView
     [self.showItemView removeItemView];
+    
+//    查看大图
+    YQShowPictureController *showPictureVc = [[YQShowPictureController alloc] init];
+    showPictureVc.pictureData = self.pictureArray[indexPath.item];
+    
+    [YQApplicationWindow.rootViewController presentViewController:showPictureVc animated:YES completion:nil];
 }
 
 

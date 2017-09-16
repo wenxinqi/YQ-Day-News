@@ -19,6 +19,7 @@
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc]initWithCustomView:button];
 }
+
 //添加一个类方法
 + (UIBarButtonItem *)itemWithImageAndTitle:(NSString *)title image:(NSString *)imageName target:(id)target Selector:(SEL)action
 {

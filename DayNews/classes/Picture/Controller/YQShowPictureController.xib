@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YQShowPictureController">
+            <connections>
+                <outlet property="scrollView" destination="0aQ-yv-gvP" id="NOM-Zt-Em3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="GdY-fP-bOS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0aQ-yv-gvP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WK4-Im-ZIb">
+                    <rect key="frame" x="10" y="25" width="46" height="25"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="7tj-Xf-gk5"/>
+                        <constraint firstAttribute="width" constant="46" id="Lnm-W8-dMk"/>
+                    </constraints>
+                    <state key="normal" title="返回">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="CfC-tl-6xF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqw-B6-dvk">
+                    <rect key="frame" x="299" y="632" width="46" height="25"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="Etf-Fg-qIB"/>
+                        <constraint firstAttribute="height" constant="25" id="NnU-wJ-W7o"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="saveImageToAblum" destination="-1" eventType="touchUpInside" id="LVy-FW-7Mo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-bM-KUb">
+                    <rect key="frame" x="233" y="629.5" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="分享">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0aQ-yv-gvP" secondAttribute="bottom" id="2Pq-AT-6gx"/>
+                <constraint firstAttribute="trailing" secondItem="0aQ-yv-gvP" secondAttribute="trailing" id="9ZE-A0-vbs"/>
+                <constraint firstItem="fqw-B6-dvk" firstAttribute="leading" secondItem="Kun-bM-KUb" secondAttribute="trailing" constant="20" id="ISa-El-gIp"/>
+                <constraint firstItem="WK4-Im-ZIb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Jcp-Va-Ajs"/>
+                <constraint firstAttribute="bottom" secondItem="fqw-B6-dvk" secondAttribute="bottom" constant="10" id="NKv-He-YzP"/>
+                <constraint firstItem="Kun-bM-KUb" firstAttribute="width" secondItem="fqw-B6-dvk" secondAttribute="width" id="Yyu-AB-d4D"/>
+                <constraint firstItem="Kun-bM-KUb" firstAttribute="centerY" secondItem="fqw-B6-dvk" secondAttribute="centerY" id="hAF-fU-ZsL"/>
+                <constraint firstItem="0aQ-yv-gvP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nMT-hl-hvb"/>
+                <constraint firstItem="0aQ-yv-gvP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q3b-kY-y4P"/>
+                <constraint firstItem="WK4-Im-ZIb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="q6J-JP-kLt"/>
+                <constraint firstAttribute="trailing" secondItem="fqw-B6-dvk" secondAttribute="trailing" constant="30" id="ypA-Sa-f0g"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="30" y="29"/>
+        </view>
+    </objects>
+</document>

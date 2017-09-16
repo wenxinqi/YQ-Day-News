@@ -25,4 +25,19 @@
     self.titleLabel.text = pictureData.title;
 }
 
+
+//- (void)awakeFromNib{
+//    [super awakeFromNib];
+////    给imageview添加一个点击事件查看大图
+//    self.imageView.userInteractionEnabled = YES;
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView)];
+//    
+//    [self.imageView addGestureRecognizer:tap];
+//}
+//
+//- (void)tapImageView
+//{
+//    
+//}
+
 @end

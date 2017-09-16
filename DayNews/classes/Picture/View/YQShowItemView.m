@@ -41,11 +41,21 @@
         
         [btn setTitle:itemNames[i] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:itemImages[i]] forState:UIControlStateNormal];
+//        给按钮添加点击事件
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        btn.tag = i;
         
         [self addSubview:btn];
     }
 }
 
+//点击事件
+- (void)btnClick:(UIButton *)btn
+{
+    if (self.selectBtn) {
+        self.selectBtn(btn.titleLabel.text);
+    }
+}
 - (void)addItemView
 {
         [YQApplicationWindow addSubview:self];

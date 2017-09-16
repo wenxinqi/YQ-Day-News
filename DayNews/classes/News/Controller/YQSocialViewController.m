@@ -95,7 +95,7 @@
     [self.tableView.mj_header beginRefreshing];
     
     __weak YQSocialViewController *weak_self = self;
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
          [weak_self requestNet:2];
     }];
 }

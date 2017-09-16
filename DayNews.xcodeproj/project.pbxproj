@@ -31,6 +31,8 @@
 		55B7CCDE1F36E17800451745 /* YQVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CCDC1F36E17800451745 /* YQVideoTableViewCell.m */; };
 		55B7CCDF1F36E17800451745 /* YQVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B7CCDD1F36E17800451745 /* YQVideoTableViewCell.xib */; };
 		55B7CE111F3835DD00451745 /* YQConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CE101F3835DD00451745 /* YQConst.m */; };
+		55C57A9F1F6CC74E00FC7230 /* YQShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C57A9D1F6CC74E00FC7230 /* YQShowPictureController.m */; };
+		55C57AA01F6CC74E00FC7230 /* YQShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C57A9E1F6CC74E00FC7230 /* YQShowPictureController.xib */; };
 		55D268FF1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D268FE1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.m */; };
 		55D269021F57F72F0085ED44 /* YQHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269011F57F72F0085ED44 /* YQHTTPSessionManager.m */; };
 		55D269051F57F8A20085ED44 /* YQPictureData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269041F57F8A20085ED44 /* YQPictureData.m */; };
@@ -126,6 +128,9 @@
 		55B7CCDD1F36E17800451745 /* YQVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQVideoTableViewCell.xib; sourceTree = "<group>"; };
 		55B7CE0F1F3835DD00451745 /* YQConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YQConst.h; path = Main/View/YQConst.h; sourceTree = "<group>"; };
 		55B7CE101F3835DD00451745 /* YQConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YQConst.m; path = Main/View/YQConst.m; sourceTree = "<group>"; };
+		55C57A9C1F6CC74E00FC7230 /* YQShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQShowPictureController.h; sourceTree = "<group>"; };
+		55C57A9D1F6CC74E00FC7230 /* YQShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQShowPictureController.m; sourceTree = "<group>"; };
+		55C57A9E1F6CC74E00FC7230 /* YQShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQShowPictureController.xib; sourceTree = "<group>"; };
 		55D268FD1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQCollectionViewWaterFlowLayout.h; sourceTree = "<group>"; };
 		55D268FE1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQCollectionViewWaterFlowLayout.m; sourceTree = "<group>"; };
 		55D269001F57F72F0085ED44 /* YQHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -338,6 +343,9 @@
 			children = (
 				552702751F234E8600FF1908 /* YQPictureViewController.h */,
 				552702761F234E8600FF1908 /* YQPictureViewController.m */,
+				55C57A9C1F6CC74E00FC7230 /* YQShowPictureController.h */,
+				55C57A9D1F6CC74E00FC7230 /* YQShowPictureController.m */,
+				55C57A9E1F6CC74E00FC7230 /* YQShowPictureController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -666,6 +674,7 @@
 				55D269231F5837DE0085ED44 /* YQPhotoItem.xib in Resources */,
 				55B7CCDF1F36E17800451745 /* YQVideoTableViewCell.xib in Resources */,
 				55EE8DA21F4FFD68003FEE90 /* YQPlayerView.xib in Resources */,
+				55C57AA01F6CC74E00FC7230 /* YQShowPictureController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +781,7 @@
 				55D26B7C1F5E79E60085ED44 /* YQTotalDaTaModel.m in Sources */,
 				55EE8DA01F4FFD59003FEE90 /* YQPlayerView.m in Sources */,
 				55D269051F57F8A20085ED44 /* YQPictureData.m in Sources */,
+				55C57A9F1F6CC74E00FC7230 /* YQShowPictureController.m in Sources */,
 				55B4E2EE1F1F59A3009DF7BA /* main.m in Sources */,
 				55D26B8E1F5E90A50085ED44 /* YQImagesCell.m in Sources */,
 				552702861F234E8600FF1908 /* YQVideoViewController.m in Sources */,
