@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YQTabBarController.h"
+#import "YQStartViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,13 +22,31 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-    YQTabBarController *tabBarVc = [[YQTabBarController alloc] init];
-    tabBarVc.tabBar.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha: 1];
+//    获取缓存的版本号
+    NSString *versionCacha = [[NSUserDefaults standardUserDefaults] objectForKey:@"VersionCache"];
+//    获取当前版本号
+    NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     
-//    self.window.rootViewController = tabBarVc;
+    if (![versionCacha isEqualToString:currentVersion]) {
+        YQStartViewController *startVc = [[YQStartViewController alloc] init];
+        startVc.url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"qidong" ofType:@"mp4"]];
+       
+        [self.window makeKeyAndVisible];
+        [UIApplication sharedApplication].keyWindow.rootViewController = startVc;
     
-    [self.window makeKeyAndVisible];
-    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+//        同步沙盒中的版本号
+       [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"VersionCache"];
+    }else{
+        YQTabBarController *tabBarVc = [[YQTabBarController alloc] init];
+        tabBarVc.tabBar.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha: 1];
+        
+        //    self.window.rootViewController = tabBarVc;
+        
+        [self.window makeKeyAndVisible];
+        [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+    }
+    
+    
      
     return YES;
 }

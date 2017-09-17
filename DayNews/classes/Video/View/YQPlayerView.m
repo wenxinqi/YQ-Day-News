@@ -60,7 +60,10 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    //        给imageView添加一个点击事件
+    
+//设置uislider滑块的图片
+    [self.slider setThumbImage:[UIImage imageNamed:@"icmpv_thumb_light"] forState:UIControlStateNormal];
+    //给imageView添加一个点击事件
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView)];
     self.imageView.userInteractionEnabled = YES;
     [self.imageView addGestureRecognizer:tap];
@@ -177,6 +180,7 @@
 
 //当slider的值发生改变时，进入这个方法
 - (IBAction)touchSlider {
+    
     
     NSTimeInterval currentTime = CMTimeGetSeconds(self.player.currentItem.duration) * self.slider.value;
     

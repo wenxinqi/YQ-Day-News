@@ -31,7 +31,6 @@
     imageView.userInteractionEnabled = YES;
     [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)]];
     [self.scrollView addSubview:imageView];
-    self.imageView = imageView;
     
     // 图片尺寸
     CGFloat pictureW = YQSCREEN_WIDTH;
@@ -49,7 +48,20 @@
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.pictureData.small_url] placeholderImage:nil options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 //        YQLog(@"下载完成");
     }];
+    self.imageView = imageView;
     
+//    给图片添加一个捏合手势
+    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+    
+    [self.imageView addGestureRecognizer:pinch];
+}
+
+//捏合手势方法实现
+- (void)pinch:(UIPinchGestureRecognizer *)pinch
+{
+    self.imageView.transform = CGAffineTransformScale(self.imageView.transform, pinch.scale, pinch.scale);
+    
+    pinch.scale = 1;
 }
 - (IBAction)saveImageToAblum {
     

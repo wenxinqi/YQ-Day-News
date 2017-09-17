@@ -33,6 +33,8 @@
 		55B7CE111F3835DD00451745 /* YQConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CE101F3835DD00451745 /* YQConst.m */; };
 		55C57A9F1F6CC74E00FC7230 /* YQShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C57A9D1F6CC74E00FC7230 /* YQShowPictureController.m */; };
 		55C57AA01F6CC74E00FC7230 /* YQShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C57A9E1F6CC74E00FC7230 /* YQShowPictureController.xib */; };
+		55C57AA31F6E0B1C00FC7230 /* YQStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C57AA21F6E0B1C00FC7230 /* YQStartViewController.m */; };
+		55C57AA51F6E10BC00FC7230 /* qidong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 55C57AA41F6E10BC00FC7230 /* qidong.mp4 */; };
 		55D268FF1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D268FE1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.m */; };
 		55D269021F57F72F0085ED44 /* YQHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269011F57F72F0085ED44 /* YQHTTPSessionManager.m */; };
 		55D269051F57F8A20085ED44 /* YQPictureData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D269041F57F8A20085ED44 /* YQPictureData.m */; };
@@ -131,6 +133,9 @@
 		55C57A9C1F6CC74E00FC7230 /* YQShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQShowPictureController.h; sourceTree = "<group>"; };
 		55C57A9D1F6CC74E00FC7230 /* YQShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQShowPictureController.m; sourceTree = "<group>"; };
 		55C57A9E1F6CC74E00FC7230 /* YQShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQShowPictureController.xib; sourceTree = "<group>"; };
+		55C57AA11F6E0B1C00FC7230 /* YQStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQStartViewController.h; sourceTree = "<group>"; };
+		55C57AA21F6E0B1C00FC7230 /* YQStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQStartViewController.m; sourceTree = "<group>"; };
+		55C57AA41F6E10BC00FC7230 /* qidong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qidong.mp4; sourceTree = "<group>"; };
 		55D268FD1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQCollectionViewWaterFlowLayout.h; sourceTree = "<group>"; };
 		55D268FE1F57A1570085ED44 /* YQCollectionViewWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQCollectionViewWaterFlowLayout.m; sourceTree = "<group>"; };
 		55D269001F57F72F0085ED44 /* YQHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -252,9 +257,12 @@
 		552702661F234E8600FF1908 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				55C57AA41F6E10BC00FC7230 /* qidong.mp4 */,
 				55B4E3251F1F5D44009DF7BA /* PrefixHeader.pch */,
 				55B4E2EF1F1F59A3009DF7BA /* AppDelegate.h */,
 				55B4E2F01F1F59A3009DF7BA /* AppDelegate.m */,
+				55C57AA11F6E0B1C00FC7230 /* YQStartViewController.h */,
+				55C57AA21F6E0B1C00FC7230 /* YQStartViewController.m */,
 				552702671F234E8600FF1908 /* YQTabBarController.h */,
 				552702681F234E8600FF1908 /* YQTabBarController.m */,
 				552702691F234E8600FF1908 /* YQNavigationController.h */,
@@ -670,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B4E2F91F1F59A3009DF7BA /* Assets.xcassets in Resources */,
+				55C57AA51F6E10BC00FC7230 /* qidong.mp4 in Resources */,
 				5527028E1F2350E500FF1908 /* YQHeaderView.xib in Resources */,
 				55D269231F5837DE0085ED44 /* YQPhotoItem.xib in Resources */,
 				55B7CCDF1F36E17800451745 /* YQVideoTableViewCell.xib in Resources */,
@@ -768,6 +777,7 @@
 				55D26B791F5D821E0085ED44 /* YQShowTopBannerController.m in Sources */,
 				552702891F234E8600FF1908 /* YQNewsViewController.m in Sources */,
 				55B7CCDA1F36E13100451745 /* YQVideoData.m in Sources */,
+				55C57AA31F6E0B1C00FC7230 /* YQStartViewController.m in Sources */,
 				55D833311F52F47F00AA580B /* YQRefreshGifController.m in Sources */,
 				55E701041F2A1D8200397EAB /* YQSocialViewController.m in Sources */,
 				55D833101F514F5C00AA580B /* NSDate+YQExtension.m in Sources */,
